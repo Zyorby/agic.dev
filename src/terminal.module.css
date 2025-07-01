@@ -1,0 +1,43 @@
+.main {
+  padding: 1rem;
+  overflow-wrap: break-word;  /* Force wrap long lines */
+  word-wrap: break-word;      /* Old syntax support */
+  white-space: pre-wrap;      /* Allow wrapping on pre text */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+pre {
+  white-space: pre-wrap;      /* Just to be safe */
+}
+
+.prompt {
+  padding-top: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+.cursor::after {
+  content: '_';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    font-size: 0.9rem;
+  }
+}

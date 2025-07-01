@@ -1,0 +1,21 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+}
+
+.resumeContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.resumeFrame {
+  width: 90%;
+  height: 80vh;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

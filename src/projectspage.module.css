@@ -1,0 +1,41 @@
+.container {
+  min-height: 100vh;
+  background: #f0f0f0;
+  color: #000000;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.projectGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.projectCard {
+  display: block;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  width: 90%;
+  max-width: 800px;
+}
+
+.projectCard:hover {
+  transform: scale(1.02);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+}

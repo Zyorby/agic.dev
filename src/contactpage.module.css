@@ -1,0 +1,19 @@
+.container {
+  min-height: 100vh;
+  background: #f0f0f0;
+  color: #000000;
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content a {
+  color: #0073b1;  /* LinkedIn blue */
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
