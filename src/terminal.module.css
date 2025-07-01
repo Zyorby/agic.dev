@@ -5,6 +5,8 @@
   white-space: pre-wrap;      /* Allow wrapping on pre text */
   width: 100%;
   box-sizing: border-box;
+  height: 100vm;
+  width: 100vm; /* wrap the whole screen so the use can really click anywhere */
 }
 
 pre {
