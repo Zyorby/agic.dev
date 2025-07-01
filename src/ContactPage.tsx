@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import styles from './contactpage.module.css';
+import Footer from './Footer';
 
 const ContactPage = () => {
   return (
@@ -31,9 +32,8 @@ const ContactPage = () => {
             </form>
           </div>
         </div>
-
       </div>
-    </div>
+    </div> 
   );
 };
 

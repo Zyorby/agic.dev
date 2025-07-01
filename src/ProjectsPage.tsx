@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import styles from './projectspage.module.css';
+import Footer from './Footer';
 
 const ProjectsPage = () => {
   return (
@@ -39,6 +40,7 @@ const ProjectsPage = () => {
         </div>
 
       </div>
+      <Footer />
     </div>
   );
 };

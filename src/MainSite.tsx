@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import styles from './mainsite.module.css';
+import Footer from './Footer';
 
 const MainSite = () => {
   return (
@@ -15,6 +16,7 @@ const MainSite = () => {
           <p>Comptia A+</p>
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import styles from './resumepage.module.css';
+import Footer from './Footer';
 
 const ResumePage = () => {
   return (
@@ -12,6 +13,7 @@ const ResumePage = () => {
           className={styles.resumeFrame}
         ></iframe>
       </div>
+      <Footer />
     </div>
   );
 };
