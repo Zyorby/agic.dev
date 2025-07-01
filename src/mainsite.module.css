@@ -2,7 +2,21 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #e0e0e0, #c0c0c0);
+  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(-45deg, #cfcfcf, #adadad, #f3f3f3);
+  background-size: 600% 600%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero {
@@ -24,6 +38,16 @@
 .about {
   font-size: 1.2rem;
   max-width: 600px;
+}
+
+p > p {
+   color: red;
+}
+
+.currentWork {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-top: 1rem;
 }
 
 .nav {

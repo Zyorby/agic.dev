@@ -8,7 +8,11 @@ const MainSite = () => {
       <div className={styles.hero}>
         <h1 className={styles.name}>Almedin Agic</h1>
         <p className={styles.about}>
-          I'm Almedin Agic, a cybersecurity student passionate about IT, security, and coding.
+          Cybersecurity student passionate about Information Technology and Security!
+        </p>
+        <p className={styles.currentWork}>
+          Currently Working on:
+          <p>Comptia A+</p>
         </p>
       </div>
     </div>

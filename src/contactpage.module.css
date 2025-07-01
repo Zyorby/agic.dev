@@ -1,19 +1,74 @@
 .container {
   min-height: 100vh;
-  background: #f0f0f0;
   color: #000000;
+  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(-45deg, #cfcfcf, #adadad, #f3f3f3);
+  background-size: 600% 600%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content {
   padding: 2rem;
-  text-align: center;
 }
 
-.content a {
-  color: #0073b1;  /* LinkedIn blue */
+.contactGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.linkedinBox, .formBox {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.linkedinLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0073b1;
   text-decoration: none;
 }
 
-.content a:hover {
+.linkedinLink:hover {
   text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #333;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
 }

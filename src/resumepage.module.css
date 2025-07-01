@@ -2,7 +2,21 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #f0f0f0;
+  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(-45deg, #cfcfcf, #adadad, #f3f3f3);
+  background-size: 600% 600%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .resumeContainer {
