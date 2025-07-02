@@ -12,7 +12,7 @@ const ContactPage = () => {
           <div className={styles.linkedinBox}>
             <h2>Connect with me on LinkedIn</h2>
             <a 
-              href="https://www.linkedin.com/in/almedin-agic-8ab820288/"
+              href="https://www.linkedin.com/in/almedinagic/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.linkedinLink}
