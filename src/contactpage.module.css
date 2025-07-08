@@ -1,47 +1,59 @@
 .container {
   min-height: 100vh;
-  color: #000000;
   animation: gradientShift 10s ease infinite;
   background: linear-gradient(-45deg, #cfcfcf, #adadad, #f3f3f3);
   background-size: 600% 600%;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  display: flex;
+  flex-direction: column;
+  color: #000000;
 }
 
 .content {
   padding: 2rem;
+  text-align: center;
+  flex: 1;
 }
 
-.contactGrid {
+h1 {
+  margin-bottom: 2rem;
+}
+
+.grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
-  align-items: center;
+  justify-content: center;
 }
 
-.linkedinBox, .formBox {
+.card {
   background: white;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.cardlinkedin {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  height: 25%;
+}
+
+.recaptcha {
+  display: flex;
+  justify-content: center;
 }
 
 .linkedinLink {
   display: inline-block;
-  margin-top: 0.5rem;
   color: #0073b1;
+  margin-top: 1rem;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -49,26 +61,30 @@
   text-decoration: underline;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 button {
-  background: #333;
+  background: #222;
   color: white;
-  padding: 0.5rem;
   border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-  background: #555;
+  background: #444;
 }
