@@ -23,8 +23,11 @@ const ContactPage = () => {
     }
 
     await handleSubmit(e);
+
     if (state.succeeded) {
       setSubmitted(true);
+      setCaptchaValid(false);
+      recaptchaRef.current?.reset();
       (e.target as HTMLFormElement).reset();
     }
   };
