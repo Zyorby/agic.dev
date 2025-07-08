@@ -1,58 +1,52 @@
 .container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   animation: gradientShift 10s ease infinite;
   background: linear-gradient(-45deg, #cfcfcf, #adadad, #f3f3f3);
   background-size: 600% 600%;
-  display: flex;
-  flex-direction: column;
   color: #000000;
 }
 
 .content {
-  padding: 2rem;
-  text-align: center;
   flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 h1 {
+  text-align: center;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #222;
 }
 
+/* Grid layout */
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  justify-content: center;
 }
 
-.card {
-  background: white;
+.card, .cardlinkedin {
+  background-color: #fff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.cardlinkedin {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  height: 25%;
+.card h2,
+.cardlinkedin h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.recaptcha {
-  display: flex;
-  justify-content: center;
-}
-
+/* LinkedIn link */
 .linkedinLink {
-  display: inline-block;
-  color: #0073b1;
-  margin-top: 1rem;
+  color: #0077b5;
   font-weight: bold;
   text-decoration: none;
 }
@@ -61,30 +55,72 @@ h1 {
   text-decoration: underline;
 }
 
+/* Form styles */
 .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
-input, textarea {
+.input,
+.textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 1rem;
+  resize: vertical;
 }
 
-button {
-  background: #222;
+.button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #0077b5;
   color: white;
   border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background-color: #005f8d;
+}
+
+.successMessage {
+  color: green;
   font-weight: bold;
 }
 
-button:hover {
-  background: #444;
+/* reCAPTCHA centering */
+.recaptcha {
+  display: flex;
+  justify-content: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card,
+  .cardlinkedin {
+    padding: 1.5rem;
+  }
 }
