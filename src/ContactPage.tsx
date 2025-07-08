@@ -1,11 +1,12 @@
 import ReCAPTCHA from 'react-google-recaptcha';
+import type { MutableRefObject } from 'react';
 import { useRef, useState } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import styles from './contactpage.module.css';
 
 const ContactPage = () => {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const recaptchaRef: MutableRefObject<ReCAPTCHA | null> = useRef(null);
   const [captchaValid, setCaptchaValid] = useState(false);
 
   const handleCaptchaChange = (value: string | null) => {
