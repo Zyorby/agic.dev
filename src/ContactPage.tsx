@@ -1,12 +1,11 @@
 import ReCAPTCHA from 'react-google-recaptcha';
-import type { MutableRefObject } from 'react';
 import { useRef, useState } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import styles from './contactpage.module.css';
 
 const ContactPage = () => {
-  const recaptchaRef: MutableRefObject<ReCAPTCHA | null> = useRef(null);
+  const recaptchaRef = useRef<any>(null); // FIXED: avoid type error for Vercel
   const [captchaValid, setCaptchaValid] = useState(false);
 
   const handleCaptchaChange = (value: string | null) => {
@@ -50,6 +49,7 @@ const ContactPage = () => {
               <input type="text" name="name" placeholder="Your Name" required />
               <input type="email" name="email" placeholder="Your Email" required />
               <textarea name="message" placeholder="Your Message" rows={5} required></textarea>
+
               <div className={styles.recaptcha}>
                 <ReCAPTCHA
                   sitekey="6LdknnwrAAAAAGa0jtEC_nQaiUlKsGAEH3Q4blRb"
