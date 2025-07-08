@@ -16,21 +16,26 @@ const ContactPage = () => {
   };
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     if (!captchaValid) {
-      e.preventDefault();
       alert('Please complete the CAPTCHA before submitting.');
       return;
     }
 
-    await handleSubmit(e);
+    const result = await handleSubmit(e);
 
-    if (state.succeeded) {
+    const typedResult = result as { response?: Response };
+
+    if (typedResult.response?.ok) {
       setSubmitted(true);
       setCaptchaValid(false);
       recaptchaRef.current?.reset();
       (e.target as HTMLFormElement).reset();
     }
   };
+
+
 
   return (
     <div className={styles.container}>
