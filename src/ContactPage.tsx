@@ -6,7 +6,7 @@ import Footer from './Footer';
 import styles from './contactpage.module.css';
 
 const ContactPage = () => {
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  const recaptchaRef = useRef<any>(null);
   const [captchaValid, setCaptchaValid] = useState(false);
   const [state, handleSubmit] = useForm('mgvyjnjl');
   const [submitted, setSubmitted] = useState(false);
@@ -22,8 +22,8 @@ const ContactPage = () => {
       return;
     }
 
-    const result = await handleSubmit(e);
-    if (result?.body?.ok) {
+    await handleSubmit(e);
+    if (state.succeeded) {
       setSubmitted(true);
       (e.target as HTMLFormElement).reset();
     }
