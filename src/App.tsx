@@ -5,20 +5,24 @@ import MainSite from './MainSite';
 import ResumePage from './ResumePage';
 import ProjectsPage from './ProjectsPage';
 import ContactPage from './ContactPage';
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   return (
-    <Router>
-      <BodyStyleUpdater />
-      <Routes>
-        <Route path="*" element={<IntroScreen />} />
-        <Route path="/" element={<IntroScreen />} />
-        <Route path="/main" element={<MainSite />} />
-        <Route path="/resume" element={<ResumePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <BodyStyleUpdater />
+        <Routes>
+          <Route path="*" element={<IntroScreen />} />
+          <Route path="/" element={<IntroScreen />} />
+          <Route path="/main" element={<MainSite />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Router>
+    <Analytics />
+  </>
   );
 };
 
