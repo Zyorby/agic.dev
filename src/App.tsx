@@ -6,6 +6,7 @@ import ResumePage from './ResumePage';
 import ProjectsPage from './ProjectsPage';
 import ContactPage from './ContactPage';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         </Routes>
       </Router>
     <Analytics />
+    <SpeedInsights />
   </>
   );
 };
