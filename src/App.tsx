@@ -5,6 +5,7 @@ import MainSite from './MainSite';
 import ResumePage from './ResumePage';
 import ProjectsPage from './ProjectsPage';
 import ContactPage from './ContactPage';
+import HomelabPage from './HomelabPage';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/homelab" element={<HomelabPage />} />
         </Routes>
       </Router>
     <Analytics />
