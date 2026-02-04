@@ -91,6 +91,13 @@ h1 {
   font-weight: bold;
 }
 
+.errorMessage {
+  margin-top: 0.5rem;
+  color: #b00020;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
 /* reCAPTCHA centering */
 .recaptcha {
   display: flex;

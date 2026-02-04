@@ -10,15 +10,19 @@ const ContactPage = () => {
   const [captchaValid, setCaptchaValid] = useState(false);
   const [state, handleSubmit] = useForm('mgvyjnjl');
   const [submitted, setSubmitted] = useState(false);
+  const [captchaError, setCaptchaError] = useState('');
 
   const handleCaptchaChange = (value: string | null) => {
     setCaptchaValid(!!value);
+    if (value) {
+      setCaptchaError('');
+    }
   };
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     if (!captchaValid) {
       e.preventDefault();
-      alert('Please complete the CAPTCHA before submitting.');
+      setCaptchaError('Please complete the CAPTCHA before submitting.');
       return;
     }
 
@@ -92,6 +96,9 @@ const ContactPage = () => {
                     onChange={handleCaptchaChange}
                     ref={recaptchaRef}
                   />
+                  {captchaError && (
+                    <p className={styles.errorMessage}>{captchaError}</p>
+                  )}
                 </div>
 
                 <button
