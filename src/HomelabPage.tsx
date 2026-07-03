@@ -37,6 +37,7 @@ const HomeLab = () => {
                 <li>Docker stack</li>
                 <li>Pi-hole / DNS filtering</li>
                 <li>Reverse proxy</li>
+                <li>Game Servers</li>
               </ul>
             </div>
           </div>
