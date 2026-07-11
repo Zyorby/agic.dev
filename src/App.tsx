@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import {
   identity,
   generalDescription,
@@ -320,6 +321,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
