@@ -67,8 +67,7 @@ export const identity: Identity = {
 };
 
 export const generalDescription: string[] = [
-  "Cybersecurity student at Oakland University focused on hardware security — the layer where software meets silicon: firmware, embedded interfaces, and the buses that connect them.",
-  "Learns by shipping — SDR receivers, security tooling, and a self-hosted lab where every project deploys first.",
+  "Cybersecurity student at Oakland University focused on hardware security"
 ];
 
 export const featureList: string[] = [
@@ -166,7 +165,7 @@ export const contactRows: ContactRow[] = [
 ];
 
 export const contactLine: string =
-  "Open to internships and conversations about hardware security, embedded systems, and reverse engineering.";
+  "Open to internships and conversations about hardware security";
 
 export const sections: Section[] = [
   { id: "s1", no: "1", nav: "Projects", title: "Typical applications", aka: "projects" },
