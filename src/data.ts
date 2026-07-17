@@ -138,10 +138,10 @@ export const homelabNote: string =
 
 export const qualifications: Qualification[] = [
   {
-    when: "2026 —",
-    role: "Incoming — Cybersecurity",
+    when: "2026 — Onward",
+    role: "Information Technology Coop",
     org: "Nexteer Automotive · Metro Detroit",
-    desc: "Joining the team behind steering and motion-control systems, working where software meets the road.",
+    desc: "",
   },
   {
     when: "2023 — 2024",
