@@ -59,7 +59,7 @@ export interface Section {
 
 export const identity: Identity = {
   name: "Almedin Agic",
-  subtitle: "Cybersecurity student · Hardware security · Metro Detroit, MI",
+  subtitle: "Cybersecurity student · Intern · Metro Detroit, MI",
   docNo: "AGIC-DEV",
   rev: "2.0",
   date: "JUL 2026",
@@ -67,14 +67,14 @@ export const identity: Identity = {
 };
 
 export const generalDescription: string[] = [
-  "Cybersecurity student at Oakland University focused on hardware security"
+  "Cybersecurity student at Oakland University, intern @ Nexteer "
 ];
 
 export const featureList: string[] = [
   "Hands-on hardware: Bus Pirate 5, UART / SPI / JTAG, RTL-SDR",
   "Operates a virtualized homelab — Proxmox, Docker, 10 GbE",
   "Ships tools with real users and public releases",
-  "IT support background: AD, endpoints, 50+ workstations",
+  "IT support background",
   "CompTIA A+ in progress",
 ];
 
